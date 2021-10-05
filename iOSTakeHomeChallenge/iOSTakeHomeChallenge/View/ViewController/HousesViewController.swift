@@ -19,7 +19,7 @@ class HousesViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTable), name: Notification.Name("filteredHouses"), object: nil)
         
-        tableView.addBackground(imageName: "imgHouses")
+        tableView.addBackground(imageName: AppEnum.ImageName.housesBG.rawValue)
         tableView.dataSource = viewModel
         tableView.allowsSelection = false
         

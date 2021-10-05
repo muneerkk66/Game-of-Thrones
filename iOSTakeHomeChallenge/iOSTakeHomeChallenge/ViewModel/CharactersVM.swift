@@ -15,7 +15,7 @@ class CharactersVM: NSObject, UITableViewDataSource, UISearchBarDelegate {
     func setupSearchBar(searchBar: UISearchBar) {
         searchBar.delegate = self
         searchBar.addStyles()
-        searchBar.placeholder = "Search"
+        searchBar.placeholder = AppEnum.Text.search.rawValue
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,13 +23,13 @@ class CharactersVM: NSObject, UITableViewDataSource, UISearchBarDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterTableViewCell") as! CharacterTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: AppEnum.TableViewCellID.characters.rawValue) as! CharacterTableViewCell
         cell.setupWith(character: cachedCharacters[indexPath.row])
         return cell
     }
     
     func getData(isFiltered: Bool, searchText: String, completionHandler: @escaping (Bool) -> Void) {
-        network.makeRequest(url: URL(string: AppConstants.baseURL.appending(AppConstants.APIUrls.characters.rawValue))!, type: [Character].self, completionHandler: { [self] error, characters in
+        network.makeRequest(url: URL(string: APIConstants.baseURL.appending(APIConstants.APIUrls.characters.rawValue))!, type: [Character].self, completionHandler: { [self] error, characters in
             if let characters = characters {
                 let filtered = characters.filter {character in return character.name.contains(searchText)}
                 cachedCharacters = isFiltered ?  filtered : characters

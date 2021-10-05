@@ -16,10 +16,10 @@ class CharacterTableViewCell: UITableViewCell {
     @IBOutlet weak var seasonLabel: UILabel!
     
     func setupWith(character: Character) {
-        nameLabel.text = character.name == "" ? "Unavailable" : character.name
-        cultureLabel.text = character.culture == "" ? "Unavailable" : character.culture
-        bornLabel.text = character.born == "" ? "Unavailable" : character.born
-        diedLabel.text = character.died == "" ? "Unavailable" : character.died
+        nameLabel.text = character.name == "" ? AppEnum.Text.unavailable.rawValue : character.name
+        cultureLabel.text = character.culture == "" ? AppEnum.Text.unavailable.rawValue : character.culture
+        bornLabel.text = character.born == "" ? AppEnum.Text.unavailable.rawValue : character.born
+        diedLabel.text = character.died == "" ? AppEnum.Text.unavailable.rawValue : character.died
         
         var seasons: String = ""
         for season in character.tvSeries {
@@ -43,6 +43,6 @@ class CharacterTableViewCell: UITableViewCell {
                 seasons.append("VIII")
             }
         }
-        seasonLabel.text = seasons == "" ? "Unavailable" : seasons
+        seasonLabel.text = seasons == "" ? AppEnum.Text.unavailable.rawValue : seasons
     }
 }

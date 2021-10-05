@@ -15,18 +15,18 @@ class BooksVM: NSObject, UITableViewDataSource, UISearchBarDelegate {
     private let network = NetWorkManager()
     
     func setupTableView(tableView: UITableView) {
-        tableView.addBackground(imageName: "imgBooks")
+        tableView.addBackground(imageName: AppEnum.ImageName.booksBG.rawValue)
         tableView.applyStyles()
     }
     
     func setupSearchBar(searchBar: UISearchBar) {
         searchBar.delegate = self
         searchBar.addStyles()
-        searchBar.placeholder = "Search"
+        searchBar.placeholder = AppEnum.Text.search.rawValue
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BooksTableViewCell") as! BooksTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: AppEnum.TableViewCellID.books.rawValue) as! BooksTableViewCell
         cell.setupWith(book: cachedBooks[indexPath.row])
         return cell
     }
@@ -36,7 +36,7 @@ class BooksVM: NSObject, UITableViewDataSource, UISearchBarDelegate {
     }
     
     func getData(isFiltered: Bool, searchText: String, completionHandler: @escaping (Bool) -> Void) {
-        network.makeRequest(url: URL(string: AppConstants.baseURL.appending(AppConstants.APIUrls.books.rawValue))!, type: [Book].self, completionHandler: { [self] error, books in
+        network.makeRequest(url: URL(string: APIConstants.baseURL.appending(APIConstants.APIUrls.books.rawValue))!, type: [Book].self, completionHandler: { [self] error, books in
             if let books = books {
                 let filtered = books.filter {book in return book.name.lowercased().contains(searchText.lowercased())}
                 cachedBooks = isFiltered ? filtered : books

@@ -10,7 +10,7 @@ import UIKit
 extension UITableView {
     func applyStyles() {
         self.contentInset = UIEdgeInsets(top: 220, left: 0, bottom: 0, right: 0)
-        backgroundView = UIImageView(image: UIImage(named: "imgBooks"))
+        backgroundView = UIImageView(image: UIImage(named: AppEnum.ImageName.booksBG.rawValue))
         allowsSelection = false
     }
     
@@ -35,7 +35,7 @@ extension String {
 
 extension UISearchBar {
     func addStyles() {
-        placeholder = "Search"
+        placeholder = AppEnum.Text.search.rawValue
         searchTextField.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         searchTextField.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         searchTextField.leftView?.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)

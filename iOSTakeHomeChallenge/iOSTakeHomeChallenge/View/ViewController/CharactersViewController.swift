@@ -20,7 +20,7 @@ class CharactersViewController: UIViewController {
         
         tableView.dataSource = viewModel
         tableView.allowsSelection = false
-        tableView.addBackground(imageName: "imgCharacters")
+        tableView.addBackground(imageName: AppEnum.ImageName.charactersBG.rawValue)
         
         viewModel.setupSearchBar(searchBar: searchBar)
         navigationItem.titleView = searchBar
