@@ -59,7 +59,12 @@ class HousesViewController: UIViewController, UITableViewDataSource {
     
     func loadData(houses: [House]) {
         cachedHouses = houses
-        tableView.reloadData()
+        DispatchQueue.main.async {[weak self] in
+            guard self == self else {
+                return
+            }
+            self?.tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
