@@ -15,9 +15,8 @@ enum NetworkError: Error {
     case serverError
 }
 
-class NetWorkManager{
+class NetWorkManager {
     
-    let baseURL: String = "https://anapioficeandfire.com/api/"
     
     func makeRequest<T: Decodable>(url: URL, type: T.Type, completionHandler: @escaping (_ error: Error?, _ myObject: T?) -> ()) {
         

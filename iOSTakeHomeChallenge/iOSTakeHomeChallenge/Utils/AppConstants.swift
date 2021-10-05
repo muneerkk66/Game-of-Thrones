@@ -19,8 +19,8 @@ class AppConstants: NSObject {
     
     
     enum APIUrls: String {
-        case signUp = "/api/books"
-        case login = "/api/houses"
-        case search = "/api/characters"
+        case books = "/api/books"
+        case houses = "/api/houses"
+        case characters = "/api/characters"
     }
 }
