@@ -19,6 +19,7 @@ class BooksViewController: UIViewController {
         
         tableView.dataSource = viewModel
         viewModel.setupTableView(tableView: tableView)
+        viewModel.setupSearchBar(searchBar: searchBar)
         
         navigationItem.titleView = searchBar
         viewModel.getData(isFiltered: false, searchText: "", completionHandler:  {_ in
@@ -26,11 +27,19 @@ class BooksViewController: UIViewController {
                 self.reloadTable()
             }
         })
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
+        tap.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(tap)
     }
     
     @objc private func reloadTable() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    
+    @objc private func hideKeyboard() {
+        searchBar.endEditing(true)
     }
 }

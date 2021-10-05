@@ -86,11 +86,11 @@
 		117E699225F7A21E00E313E3 /* iOSTakeHomeChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				E84D2D4A270C8E0500F7CBD4 /* NetworkManager */,
 				E84D2D47270C8DE200F7CBD4 /* View */,
-				E84D2D44270C8DBE00F7CBD4 /* Utils */,
 				E84D2D43270C8DB800F7CBD4 /* Model */,
 				E84D2D42270C8DAA00F7CBD4 /* ViewModel */,
+				E84D2D4A270C8E0500F7CBD4 /* NetworkManager */,
+				E84D2D44270C8DBE00F7CBD4 /* Utils */,
 				117E699325F7A21E00E313E3 /* AppDelegate.swift */,
 				117E699525F7A21E00E313E3 /* SceneDelegate.swift */,
 				117E699C25F7A21F00E313E3 /* Assets.xcassets */,
