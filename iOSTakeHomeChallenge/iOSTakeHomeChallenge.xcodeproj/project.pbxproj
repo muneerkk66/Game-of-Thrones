@@ -15,6 +15,19 @@
 		117E69A925F7A39900E313E3 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E69A825F7A39900E313E3 /* BooksViewController.swift */; };
 		117E69AC25F7A3A600E313E3 /* HousesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E69AB25F7A3A600E313E3 /* HousesViewController.swift */; };
 		117E69AF25F7A3B600E313E3 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */; };
+		E84D2D4C270C8F6000F7CBD4 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D4B270C8F6000F7CBD4 /* AppExtension.swift */; };
+		E84D2D4F270C901000F7CBD4 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D4E270C901000F7CBD4 /* NetWorkManager.swift */; };
+		E84D2D51270C901C00F7CBD4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D50270C901C00F7CBD4 /* Reachability.swift */; };
+		E84D2D53270C903000F7CBD4 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D52270C903000F7CBD4 /* AppConstants.swift */; };
+		E84D2D55270C932500F7CBD4 /* BooksVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D54270C932500F7CBD4 /* BooksVM.swift */; };
+		E84D2D58270C937B00F7CBD4 /* HousesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D56270C937B00F7CBD4 /* HousesVM.swift */; };
+		E84D2D59270C937B00F7CBD4 /* CharactersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D57270C937B00F7CBD4 /* CharactersVM.swift */; };
+		E84D2D5B270C969E00F7CBD4 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D5A270C969E00F7CBD4 /* Book.swift */; };
+		E84D2D5D270C96B600F7CBD4 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D5C270C96B600F7CBD4 /* House.swift */; };
+		E84D2D5F270C96C100F7CBD4 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D5E270C96C100F7CBD4 /* Character.swift */; };
+		E84D2D62270C974100F7CBD4 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D60270C974100F7CBD4 /* BooksTableViewCell.swift */; };
+		E84D2D63270C974100F7CBD4 /* HouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D61270C974100F7CBD4 /* HouseTableViewCell.swift */; };
+		E84D2D65270C975B00F7CBD4 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D2D64270C975A00F7CBD4 /* CharacterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +41,19 @@
 		117E69A825F7A39900E313E3 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		117E69AB25F7A3A600E313E3 /* HousesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewController.swift; sourceTree = "<group>"; };
 		117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		E84D2D4B270C8F6000F7CBD4 /* AppExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
+		E84D2D4E270C901000F7CBD4 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		E84D2D50270C901C00F7CBD4 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		E84D2D52270C903000F7CBD4 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		E84D2D54270C932500F7CBD4 /* BooksVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksVM.swift; sourceTree = "<group>"; };
+		E84D2D56270C937B00F7CBD4 /* HousesVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousesVM.swift; sourceTree = "<group>"; };
+		E84D2D57270C937B00F7CBD4 /* CharactersVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersVM.swift; sourceTree = "<group>"; };
+		E84D2D5A270C969E00F7CBD4 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		E84D2D5C270C96B600F7CBD4 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		E84D2D5E270C96C100F7CBD4 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		E84D2D60270C974100F7CBD4 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
+		E84D2D61270C974100F7CBD4 /* HouseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTableViewCell.swift; sourceTree = "<group>"; };
+		E84D2D64270C975A00F7CBD4 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +86,102 @@
 		117E699225F7A21E00E313E3 /* iOSTakeHomeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E84D2D4A270C8E0500F7CBD4 /* NetworkManager */,
+				E84D2D47270C8DE200F7CBD4 /* View */,
+				E84D2D44270C8DBE00F7CBD4 /* Utils */,
+				E84D2D43270C8DB800F7CBD4 /* Model */,
+				E84D2D42270C8DAA00F7CBD4 /* ViewModel */,
 				117E699325F7A21E00E313E3 /* AppDelegate.swift */,
 				117E699525F7A21E00E313E3 /* SceneDelegate.swift */,
-				117E699925F7A21E00E313E3 /* Main.storyboard */,
 				117E699C25F7A21F00E313E3 /* Assets.xcassets */,
-				117E699E25F7A21F00E313E3 /* LaunchScreen.storyboard */,
 				117E69A125F7A21F00E313E3 /* Info.plist */,
-				117E69A825F7A39900E313E3 /* BooksViewController.swift */,
-				117E69AB25F7A3A600E313E3 /* HousesViewController.swift */,
-				117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */,
 			);
 			path = iOSTakeHomeChallenge;
+			sourceTree = "<group>";
+		};
+		E84D2D42270C8DAA00F7CBD4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E84D2D57270C937B00F7CBD4 /* CharactersVM.swift */,
+				E84D2D56270C937B00F7CBD4 /* HousesVM.swift */,
+				E84D2D54270C932500F7CBD4 /* BooksVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E84D2D43270C8DB800F7CBD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E84D2D5A270C969E00F7CBD4 /* Book.swift */,
+				E84D2D5C270C96B600F7CBD4 /* House.swift */,
+				E84D2D5E270C96C100F7CBD4 /* Character.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E84D2D44270C8DBE00F7CBD4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E84D2D45270C8DC700F7CBD4 /* Extension */,
+				E84D2D52270C903000F7CBD4 /* AppConstants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E84D2D45270C8DC700F7CBD4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E84D2D4B270C8F6000F7CBD4 /* AppExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E84D2D47270C8DE200F7CBD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E84D2D4D270C8FDA00F7CBD4 /* StoryBoard */,
+				E84D2D49270C8DF400F7CBD4 /* Views */,
+				E84D2D48270C8DEC00F7CBD4 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E84D2D48270C8DEC00F7CBD4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */,
+				117E69A825F7A39900E313E3 /* BooksViewController.swift */,
+				117E69AB25F7A3A600E313E3 /* HousesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E84D2D49270C8DF400F7CBD4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E84D2D64270C975A00F7CBD4 /* CharacterTableViewCell.swift */,
+				E84D2D60270C974100F7CBD4 /* BooksTableViewCell.swift */,
+				E84D2D61270C974100F7CBD4 /* HouseTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E84D2D4A270C8E0500F7CBD4 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				E84D2D4E270C901000F7CBD4 /* NetWorkManager.swift */,
+				E84D2D50270C901C00F7CBD4 /* Reachability.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		E84D2D4D270C8FDA00F7CBD4 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				117E699925F7A21E00E313E3 /* Main.storyboard */,
+				117E699E25F7A21F00E313E3 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +254,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84D2D5D270C96B600F7CBD4 /* House.swift in Sources */,
+				E84D2D59270C937B00F7CBD4 /* CharactersVM.swift in Sources */,
+				E84D2D58270C937B00F7CBD4 /* HousesVM.swift in Sources */,
 				117E69AC25F7A3A600E313E3 /* HousesViewController.swift in Sources */,
+				E84D2D62270C974100F7CBD4 /* BooksTableViewCell.swift in Sources */,
+				E84D2D53270C903000F7CBD4 /* AppConstants.swift in Sources */,
 				117E69AF25F7A3B600E313E3 /* CharactersViewController.swift in Sources */,
+				E84D2D55270C932500F7CBD4 /* BooksVM.swift in Sources */,
 				117E69A925F7A39900E313E3 /* BooksViewController.swift in Sources */,
+				E84D2D4C270C8F6000F7CBD4 /* AppExtension.swift in Sources */,
+				E84D2D4F270C901000F7CBD4 /* NetWorkManager.swift in Sources */,
+				E84D2D65270C975B00F7CBD4 /* CharacterTableViewCell.swift in Sources */,
 				117E699425F7A21E00E313E3 /* AppDelegate.swift in Sources */,
+				E84D2D51270C901C00F7CBD4 /* Reachability.swift in Sources */,
+				E84D2D5F270C96C100F7CBD4 /* Character.swift in Sources */,
+				E84D2D5B270C969E00F7CBD4 /* Book.swift in Sources */,
+				E84D2D63270C974100F7CBD4 /* HouseTableViewCell.swift in Sources */,
 				117E699625F7A21E00E313E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
