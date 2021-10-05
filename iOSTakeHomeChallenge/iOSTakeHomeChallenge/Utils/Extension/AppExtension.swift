@@ -32,3 +32,20 @@ extension String {
         return monthYear
     }
 }
+
+extension UISearchBar {
+    func addStyles() {
+        placeholder = "Search"
+        searchTextField.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        searchTextField.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        searchTextField.leftView?.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        searchTextField.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    }
+}
+
+
+extension Array where Element == String {
+    func containsIgnoringCase(_ element: Element) -> Bool {
+        contains { $0.caseInsensitiveCompare(element) == .orderedSame }
+    }
+}

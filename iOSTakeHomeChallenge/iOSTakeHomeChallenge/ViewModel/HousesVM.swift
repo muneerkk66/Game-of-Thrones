@@ -5,11 +5,15 @@
 //  Created by Muneer KK on 05/10/21.
 //
 import UIKit
-class HousesViewModel: NSObject, UITableViewDataSource {
+class HousesVM: NSObject, UITableViewDataSource, UISearchBarDelegate {
     
     private var cachedHouses: [House] = []
     private let network = NetWorkManager()
     
+    func setupSearchBar(searchBar: UISearchBar) {
+        searchBar.delegate = self
+        searchBar.addStyles()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         cachedHouses.count
@@ -30,5 +34,21 @@ class HousesViewModel: NSObject, UITableViewDataSource {
             }
         })
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let searchText = searchBar.text
+        guard searchText!.isEmpty || searchText == "" else {
+            getData(isFiltered: true, searchText: searchText!, completionHandler:  {_ in
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "filteredHouses"), object: nil)
+            })
+            return
+        }
+        getData(isFiltered: false, searchText: "", completionHandler:  {_ in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "filteredHouses"), object: nil)
+        })
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }
-

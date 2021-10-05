@@ -7,11 +7,16 @@
 
 import UIKit
 
-class CharactersViewModel: NSObject, UITableViewDataSource {
+class CharactersVM: NSObject, UITableViewDataSource, UISearchBarDelegate {
     
     private var cachedCharacters: [Character] = []
     private let network = NetWorkManager()
     
+    func setupSearchBar(searchBar: UISearchBar) {
+        searchBar.delegate = self
+        searchBar.addStyles()
+        searchBar.placeholder = "Search"
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         cachedCharacters.count
@@ -32,5 +37,22 @@ class CharactersViewModel: NSObject, UITableViewDataSource {
             }
         })
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let searchText = searchBar.text
+        guard searchText!.isEmpty || searchText == "" else {
+            getData(isFiltered: true, searchText: searchText!, completionHandler:  {_ in
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "filteredCharacters"), object: nil)
+            })
+            return
+        }
+        getData(isFiltered: false, searchText: "", completionHandler:  {_ in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "filteredCharacters"), object: nil)
+        })
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }
-
