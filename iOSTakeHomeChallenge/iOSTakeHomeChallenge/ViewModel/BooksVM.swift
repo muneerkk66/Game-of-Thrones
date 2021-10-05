@@ -38,7 +38,7 @@ class BooksVM: NSObject, UITableViewDataSource, UISearchBarDelegate {
     func getData(isFiltered: Bool, searchText: String, completionHandler: @escaping (Bool) -> Void) {
         network.makeRequest(url: URL(string: AppConstants.baseURL.appending(AppConstants.APIUrls.books.rawValue))!, type: [Book].self, completionHandler: { [self] error, books in
             if let books = books {
-                let filtered = books.filter {book in return book.name.contains(searchText)}
+                let filtered = books.filter {book in return book.name.lowercased().contains(searchText.lowercased())}
                 cachedBooks = isFiltered ? filtered : books
                 completionHandler(true)
             }

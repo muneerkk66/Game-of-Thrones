@@ -42,3 +42,10 @@ extension UISearchBar {
         searchTextField.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
 }
+
+
+extension Array where Element == String {
+    func containsIgnoringCase(_ element: Element) -> Bool {
+        contains { $0.caseInsensitiveCompare(element) == .orderedSame }
+    }
+}
