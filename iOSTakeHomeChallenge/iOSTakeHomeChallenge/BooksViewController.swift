@@ -54,7 +54,12 @@ class BooksViewController: UIViewController, UITableViewDataSource {
     
     func loadData(books: [Book]) {
         cachedBooks = books
-        tableView.reloadData()
+        DispatchQueue.main.async {[weak self] in
+            guard self == self else {
+                return
+            }
+            self?.tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
