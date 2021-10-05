@@ -18,9 +18,13 @@ class AppConstants: NSObject {
     static let baseURL = BaseURL.production.rawValue
     
     
+    
+    //MARK:  URLS
     enum APIUrls: String {
         case books = "/api/books"
         case houses = "/api/houses"
         case characters = "/api/characters"
     }
+    
+    
 }
