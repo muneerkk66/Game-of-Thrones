@@ -20,13 +20,13 @@ class HousesVM: NSObject, UITableViewDataSource, UISearchBarDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HouseTableViewCell") as! HouseTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: AppEnum.TableViewCellID.houses.rawValue) as! HouseTableViewCell
         cell.setupWith(house: cachedHouses[indexPath.row])
         return cell
     }
 
     func getData(isFiltered: Bool, searchText: String, completionHandler: @escaping (Bool) -> Void) {
-        network.makeRequest(url: URL(string: AppConstants.baseURL.appending(AppConstants.APIUrls.houses.rawValue))!, type: [House].self, completionHandler: { [self] error, houses in
+        network.makeRequest(url: URL(string: APIConstants.baseURL.appending(APIConstants.APIUrls.houses.rawValue))!, type: [House].self, completionHandler: { [self] error, houses in
             if let houses = houses {
                 let filtered = houses.filter {house in return house.name.contains(searchText)}
                 cachedHouses = isFiltered ? filtered : houses
